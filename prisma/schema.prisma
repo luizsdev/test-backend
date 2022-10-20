@@ -14,7 +14,7 @@ model Servicos {
   id            Int          @id @default(autoincrement())
   tituloServico String
   descServico   String
-  dataServico   DateTime
+  dataServico   DateTime     @default(now()) @db.Date
   tipoServico   TipoServicos @relation(fields: [idTipoServico], references: [id])
   idTipoServico Int
   usuario       Usuarios     @relation(fields: [idUsuario], references: [id])
