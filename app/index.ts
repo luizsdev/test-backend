@@ -1,7 +1,7 @@
 import express from 'express';
 import router from './Routes/servicosRoutes';
 
-const app = express();
+export const app = express();
 const PORT = process.env.PORT || 5000;
 
 app.use('/', router);
