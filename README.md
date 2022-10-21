@@ -164,4 +164,7 @@ In this example, it is registering services all mondays and wednesdays until 30t
 
 ##  ✨Example of requisitions
 <img src="./docs/assets/getservicos.jpg">
-
+<img src="./docs/assets/getservicosquery.jpg">
+<img src="./docs/assets/postservicos.jpg">
+<img src="./docs/assets/postservicomultiplo.jpg">
+<img src="./docs/assets/removerservico.jpg">
