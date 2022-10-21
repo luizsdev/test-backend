@@ -61,10 +61,8 @@ export class servicosController {
   }
   //MÉTODO QUE CRIA SERVIÇOS
   static async criarServico(req: Request, res: Response) {
-    const { tituloServico, descServico, dataServico, idTipoServico, idUsuario, dataLimite } = req.body;
+    const { tituloServico, descServico, dataServico, idTipoServico, idUsuario } = req.body;
     const parsedData = new Date(dataServico);
-    const parsedDataLimite = new Date(dataLimite);
-
     await prisma.servicos
       .create({
         data: {
@@ -79,7 +77,6 @@ export class servicosController {
         return res.status(200).json({
           message: 'Serviço criado com sucesso',
           servico,
-          dias: Math.floor(differenceInCalendarDays(parsedDataLimite, parsedData) / 7),
         });
       })
       .catch(() => {
@@ -302,7 +299,7 @@ export class servicosController {
   }
   //MÉTODO QUE REMOVE
   static async removerServico(req: Request, res: Response) {
-    const { id } = req.body;
+    const { id } = req.params;
     await prisma.servicos
       .delete({
         where: {

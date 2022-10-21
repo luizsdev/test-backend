@@ -16,6 +16,6 @@ router.post('/servicos', validarServico, servicosController.criarServico);
 //ROTA PARA CRIAR MULTIPLOS SERVICOS DEPENDENDO DO DIA DA SEMANA E COM UMA DATA LIMITE
 router.post('/servicomultiplo', servicosController.criarServicoComDataLimite);
 //ROTA PARA REMOVER UM SERVIÇO
-router.delete('/servicos', servicosController.removerServico);
+router.delete('/servicos/:id', servicosController.removerServico);
 
 export default router;
