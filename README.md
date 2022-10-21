@@ -82,11 +82,4 @@ In this example, it is registering services all mondays and wednesdays until 30t
 
 </details>
 
-<details>
-
-
-
-
-
-</details>
 
